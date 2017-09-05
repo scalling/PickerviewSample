@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getOptionData();
 
         initTimePicker();
-        initCustomTimePicker();
         initOptionPicker();
+        initCustomTimePicker();
         initCustomOptionPicker();
         initNoLinkOptionsPicker();
 
