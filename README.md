@@ -71,8 +71,6 @@ TimePickerView pvTime = new TimePickerView.Builder(this, new TimePickerView.OnTi
         }).build();
  pvOptions.setPicker(options1Items, options2Items, options3Items);
  pvOptions.show(); 
-```
-#### 大功告成~
 
 #### 3.如果默认样式不符合你的口味，可以自定义各种属性：
 ```java
