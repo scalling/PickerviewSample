@@ -29,16 +29,16 @@
 
 #### 1.添加Jcenter仓库 Gradle依赖：
 ```java
- compile 'com.bigkoo.pickerview:pickerview:3.2.6'
+ compile 'com.zm.pickerview:pickerview:1.0.0'
 ```
 或者
 
 #### Maven
 ```
 <dependency>
-  <groupId>com.bigkoo.pickerview</groupId>
+  <groupId>com.zm.pickerview</groupId>
   <artifactId>pickerview</artifactId>
-  <version>3.2.6</version>
+  <version>1.0.0</version>
   <type>pom</type>
 </dependency>
 ```

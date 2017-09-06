@@ -10,8 +10,8 @@ android {
     defaultConfig {
         minSdkVersion 9
         targetSdkVersion 25
-        versionCode 22
-        versionName "3.2.6"
+        versionCode 1
+        versionName "1.0.0"//3.2.6
     }
     buildTypes {
         release {
@@ -29,13 +29,13 @@ dependencies {
 }
 
 //项目主页
-def siteUrl = 'https://github.com/scalling/sample2'
+def siteUrl = 'https://github.com/scalling/PickerviewSample'
 publish {
     repoName = 'maven'
     userOrg = 'zmcat'
-    groupId = 'com.bigkoo.pickerview'
+    groupId = 'com.zm.pickerview'
     artifactId = 'pickerview'
-    publishVersion = '3.2.6'
+    publishVersion = '1.0.0'
     desc = '滚轮选择器'
     website = siteUrl
 }
