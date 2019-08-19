@@ -1,6 +1,7 @@
 
 ## PickerView
-这是根据Android-PickerView修改的
+这是根据[Android-PickerView](https://github.com/Bigkoo/Android-PickerView)修改的，PickerView 是基于wheelview，wheelview可以根据自己需求设置滚动的条目数量,
+如有特需要求，可只引用wheelview进行自己的定制化view
 ## 介绍
 
 这是一款仿iOS的PickerView控件，有时间选择和选项选择，并支持一二三级联动，支持自定义样式，3.x新版本的详细特性如下：
@@ -28,8 +29,8 @@
 ### **使用步骤：**
 
 #### 1.添加Jcenter仓库 Gradle依赖：
-```java
- compile 'com.zm.pickerview:pickerview:1.0.0'
+```
+ compile 'com.zm.pickerview:pickerview:1.0.1'
 ```
 或者
 
@@ -38,13 +39,13 @@
 <dependency>
   <groupId>com.zm.pickerview</groupId>
   <artifactId>pickerview</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <type>pom</type>
 </dependency>
 ```
 #### 2.在Activity中添加如下代码：
 
-```java
+```
 //时间选择器
 TimePickerView pvTime = new TimePickerView.Builder(this, new TimePickerView.OnTimeSelectListener() {
             @Override
@@ -57,7 +58,7 @@ TimePickerView pvTime = new TimePickerView.Builder(this, new TimePickerView.OnTi
  pvTime.show();
 ```
 
-```java
+```
 //条件选择器
  OptionsPickerView pvOptions = new  OptionsPickerView.Builder(this, new OptionsPickerView.OnOptionsSelectListener() {
             @Override
@@ -90,6 +91,7 @@ TimePickerView pvTime = new TimePickerView.Builder(this, new TimePickerView.OnTi
                 tvTime.setText(getTime(date));
             }
         })
+                .setItemCount(5)//设置滚动条目 单数 最小设置为5 默认11
                 .setType(new boolean[]{true, true, true, true, true, true})// 默认全部显示
                 .setCancelText("Cancel")//取消按钮文字
                 .setSubmitText("Sure")//确认按钮文字
@@ -113,7 +115,7 @@ TimePickerView pvTime = new TimePickerView.Builder(this, new TimePickerView.OnTi
                 .build();
 ```
 
-```java
+```
 pvOptions = new  OptionsPickerView.Builder(this, new OptionsPickerView.OnOptionsSelectListener() {
             @Override
             public void onOptionsSelect(int options1, int option2, int options3 ,View v) {
@@ -124,6 +126,7 @@ pvOptions = new  OptionsPickerView.Builder(this, new OptionsPickerView.OnOptions
                 tvOptions.setText(tx);
             }
         })
+                .setItemCount(5)//设置滚动条目 单数 最小设置为5 默认11
                 .setSubmitText("确定")//确定按钮文字
                 .setCancelText("取消")//取消按钮文字
                 .setTitleText("城市选择")//标题
@@ -149,7 +152,7 @@ pvOptions = new  OptionsPickerView.Builder(this, new OptionsPickerView.OnOptions
 ```
 #### 4.如果需要自定义布局：
 
-```java
+```
         // 注意：自定义布局中，id为 optionspicker 或者 timepicker 的布局以及其子控件必须要有，否则会报空指针
         // 具体可参考demo 里面的两个自定义布局
         pvCustomOptions = new OptionsPickerView.Builder(this, new OptionsPickerView.OnOptionsSelectListener() {
@@ -195,6 +198,30 @@ pvOptions = new  OptionsPickerView.Builder(this, new OptionsPickerView.OnOptions
 ```
 
 
+###WheelView 使用代码示例：
+```
+ <com.contrarywind.view.WheelView
+            android:id="@+id/wheelview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+```
+### **使用步骤：**
+
+#### 1.添加Jcenter仓库 Gradle依赖：
+```
+ compile 'com.zm.wheelView:wheelView:1.0.1'
+```
+或者
+
+#### Maven
+```
+<dependency>
+  <groupId>com.zm.wheelView</groupId>
+  <artifactId>wheelView</artifactId>
+  <version>1.0.1</version>
+  <type>pom</type>
+</dependency>
+```
 ### 借鉴
 -[Android-PickerView](https://github.com/Bigkoo/Android-PickerView)
 

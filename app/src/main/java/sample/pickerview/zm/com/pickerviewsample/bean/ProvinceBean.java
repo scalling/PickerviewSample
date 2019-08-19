@@ -1,25 +1,31 @@
 package sample.pickerview.zm.com.pickerviewsample.bean;
 
-import com.bigkoo.pickerview.model.IPickerViewData;
 
-import java.io.Serializable;
-import java.util.List;
+import com.contrarywind.interfaces.IPickerViewData;
 
 /**
- * TODO<json数据源>
- *
- * @author: 小嵩
- * @date: 2017/3/16 15:36
+ * Created by Sai on 15/11/22.
  */
+public class ProvinceBean implements IPickerViewData {
+    private long id;
+    private String name;
+    private String description;
+    private String others;
 
-public class ProvinceBean implements Serializable, IPickerViewData{
-    public ProvinceBean(){}
     public ProvinceBean(long id,String name,String description,String others){
+        this.id = id;
         this.name = name;
+        this.description = description;
+        this.others = others;
     }
 
-    private String name;
-    private List<CityBean> city;
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -29,19 +35,25 @@ public class ProvinceBean implements Serializable, IPickerViewData{
         this.name = name;
     }
 
-    public List<CityBean> getCity() {
-        return city;
+    public String getDescription() {
+        return description;
     }
 
-    public void setCity(List<CityBean> city) {
-        this.city = city;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    // 实现 IPickerViewData 接口，
-    // 这个用来显示在PickerView上面的字符串，
-    // PickerView会通过IPickerViewData获取getPickerViewText方法显示出来。
+    public String getOthers() {
+        return others;
+    }
+
+    public void setOthers(String others) {
+        this.others = others;
+    }
+
+    //这个用来显示在PickerView上面的字符串,PickerView会通过getPickerViewText方法获取字符串显示出来。
     @Override
     public String getPickerViewText() {
-        return this.name;
+        return name;
     }
 }
