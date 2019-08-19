@@ -30,18 +30,7 @@
 
 #### 1.添加Jcenter仓库 Gradle依赖：
 ```
- compile 'com.zm.pickerview:pickerview:1.0.1'
-```
-或者
-
-#### Maven
-```
-<dependency>
-  <groupId>com.zm.pickerview</groupId>
-  <artifactId>pickerview</artifactId>
-  <version>1.0.1</version>
-  <type>pom</type>
-</dependency>
+ implementation 'com.zm.pickerview:pickerview:1.0.1'
 ```
 #### 2.在Activity中添加如下代码：
 
@@ -197,30 +186,18 @@ pvOptions = new  OptionsPickerView.Builder(this, new OptionsPickerView.OnOptions
         pvCustomOptions.setPicker(cardItem);//添加数据
 ```
 
-
-###WheelView 使用代码示例：
+#### 5.对使用还有疑问的话，可参考demo代码
+[请戳我查看demo代码](https://github.com/scalling/PickerviewSample/blob/master/app/src/main/java/sample/pickerview/zm/com/pickerviewsample/MainActivity.java)
+#### 6.若只需要WheelView基础控件自行扩展实现逻辑，可直接添加基础控件库，Gradle 依赖：
+```
+    implementation 'com.zm.wheelview:wheelview:1.0.1'
+```
+##### 示例
 ```
  <com.contrarywind.view.WheelView
             android:id="@+id/wheelview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-```
-### **使用步骤：**
-
-#### 1.添加Jcenter仓库 Gradle依赖：
-```
- compile 'com.zm.wheelView:wheelView:1.0.1'
-```
-或者
-
-#### Maven
-```
-<dependency>
-  <groupId>com.zm.wheelView</groupId>
-  <artifactId>wheelView</artifactId>
-  <version>1.0.1</version>
-  <type>pom</type>
-</dependency>
 ```
 ### 借鉴
 -[Android-PickerView](https://github.com/Bigkoo/Android-PickerView)

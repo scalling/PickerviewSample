@@ -1,13 +1,14 @@
 apply plugin: 'com.android.library'
-
-
-
 android {
-    compileSdkVersion 26
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    compileSdkVersion 28
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 26
+        minSdkVersion 15
+        targetSdkVersion 28
         versionCode 30
         versionName "4.0.9"
     }
@@ -20,20 +21,15 @@ android {
     lintOptions {
         abortOnError false
     }
+
 }
 
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
 dependencies {
     implementation 'com.android.support:support-annotations:28.0.0'
 }
-
-//项目主页
-//def siteUrl = 'https://github.com/scalling/PickerviewSample'
-//publish {
-//    repoName = 'maven'
-//    userOrg = 'zmcat'
-//    groupId = 'com.zm.pickerview'
-//    artifactId = 'pickerview'
-//    publishVersion = '1.0.0'
-//    desc = '滚轮选择器'
-//    website = siteUrl
-//}
+apply from: 'bintray.gradle'

@@ -1,0 +1,35 @@
+apply plugin: 'com.novoda.bintray-release'
+//项目主页
+def siteUrl = 'https://github.com/scalling/PickerviewSample'
+publish {
+    repoName = 'maven'
+    userOrg = 'zmcat'
+    groupId = 'com.zm.wheelview'
+    artifactId = 'wheelview'
+    publishVersion = '1.0.1'//4.0.9
+    desc = 'Wheel selector'
+    website = siteUrl
+}
+tasks.withType(Javadoc) {//防止编码问题
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+task javadoc(type: Javadoc) {
+    failOnError false
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
