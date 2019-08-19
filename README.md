@@ -1,7 +1,6 @@
 
 ## PickerView
-这是根据[Android-PickerView](https://github.com/Bigkoo/Android-PickerView)修改的，PickerView 是基于wheelview，wheelview可以根据自己需求设置滚动的条目数量,
-如有特需要求，可只引用wheelview进行自己的定制化view
+这是根据作者[Bigkoo](https://github.com/Bigkoo)的[Android-PickerView](https://github.com/Bigkoo/Android-PickerView)项目修改的，由于项目的需求无需那么多滚动条目，对此项目进行了修改，PickerView 是基于wheelview，可以根据自己需求设置滚动的条目数量
 ## 介绍
 
 这是一款仿iOS的PickerView控件，有时间选择和选项选择，并支持一二三级联动，支持自定义样式，3.x新版本的详细特性如下：
