@@ -199,6 +199,24 @@ pvOptions = new  OptionsPickerView.Builder(this, new OptionsPickerView.OnOptions
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 ```
+```
+WheelView wheelView = findViewById(R.id.wheelview);
+
+        wheelView.setCyclic(false);
+
+        final List<String> mOptionsItems = new ArrayList<>();
+        mOptionsItems.add("item0");
+        mOptionsItems.add("item1");
+        mOptionsItems.add("item2");
+  
+        wheelView.setAdapter(new ArrayWheelAdapter(mOptionsItems));
+        wheelView.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(int index) {
+                Toast.makeText(MainActivity.this, "" + mOptionsItems.get(index), Toast.LENGTH_SHORT).show();
+            }
+        });
+ ```
 ### 借鉴
 -[Android-PickerView](https://github.com/Bigkoo/Android-PickerView)
 
