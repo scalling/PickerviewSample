@@ -6,7 +6,7 @@ publish {
     userOrg = 'zmcat'
     groupId = 'com.zm.wheelview'
     artifactId = 'wheelview'
-    publishVersion = '1.0.2'//4.0.9
+    publishVersion = '1.0.3'//4.0.9
     desc = 'Wheel selector'
     website = siteUrl
 }
