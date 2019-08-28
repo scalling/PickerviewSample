@@ -20,6 +20,8 @@ public class PickerViewAnimateUtil {
         switch (gravity) {
             case Gravity.BOTTOM:
                 return isInAnimation ? R.anim.pickerview_slide_in_bottom : R.anim.pickerview_slide_out_bottom;
+            case Gravity.CENTER:
+                return isInAnimation ? R.anim.pickerview_dialog_scale_in : R.anim.pickerview_dialog_scale_out;
         }
         return INVALID;
     }
