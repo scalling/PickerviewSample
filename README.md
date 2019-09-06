@@ -29,7 +29,7 @@
 
 #### 1.添加Jcenter仓库 Gradle依赖：
 ```
- implementation 'com.zm.pickerview:pickerview:1.0.3'
+ implementation 'com.zm.pickerview:pickerview:1.0.4'
 ```
 #### 2.在Activity中添加如下代码：
 
@@ -189,7 +189,7 @@ pvOptions = new  OptionsPickerView.Builder(this, new OptionsPickerView.OnOptions
 [请戳我查看demo代码](https://github.com/scalling/PickerviewSample/blob/master/app/src/main/java/sample/pickerview/zm/com/pickerviewsample/MainActivity.java)
 #### 6.若只需要WheelView基础控件自行扩展实现逻辑，可直接添加基础控件库，Gradle 依赖：
 ```
-    implementation 'com.zm.wheelview:wheelview:1.0.3'
+    implementation 'com.zm.wheelview:wheelview:1.0.4'
 ```
 ##### 示例
 ```
